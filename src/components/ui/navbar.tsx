@@ -90,10 +90,9 @@ export function Navbar() {
             <div className="flex items-center gap-3">
               <a
                 href={contactContent.resumePdf || "/Nandita_Santra_Resume.pdf"}
-                download="Nandita_Santra_Resume.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#FFFBF6] border border-[#141414]/20 hover:border-[#141414] text-[#141414] text-xs font-extrabold uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFFBF6] border border-[#141414]/20 hover:border-[#141414] text-[#141414] text-xs font-extrabold uppercase tracking-wider transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Resume</span>
