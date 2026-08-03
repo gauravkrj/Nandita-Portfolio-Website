@@ -2,6 +2,8 @@ backend:
   name: github
   repo: gauravkrj/Nandita-Portfolio-Website
   branch: main
+  base_url: https://nanditasantra.vercel.app
+  auth_endpoint: api/auth
 
 site_url: https://nanditasantra.vercel.app
 media_folder: "public/uploads"
