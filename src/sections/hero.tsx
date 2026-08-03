@@ -83,7 +83,6 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#141414]/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 text-white text-xs font-bold uppercase tracking-wider">
                 <p className="text-[#FFFBF6]">Digital Marketing Specialist</p>
-                <p className="text-white/70 text-[11px] font-normal">IDCM Advanced Diploma Candidate</p>
               </div>
             </div>
           </motion.div>
