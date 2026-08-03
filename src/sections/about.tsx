@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BarChart3, Layers, GraduationCap } from "lucide-react";
+import { BarChart3, Layers, GraduationCap, Download } from "lucide-react";
 import aboutContent from "@/content/about.json";
+import contactContent from "@/content/contact.json";
 
 export function AboutSection() {
   return (
@@ -100,7 +101,7 @@ export function AboutSection() {
 
             </div>
 
-            {/* Card 3: Education & Qualification */}
+            {/* Card 3: Education & Qualification with Resume Button */}
             <motion.div
               whileHover={{ y: -3 }}
               transition={{ duration: 0.2 }}
@@ -112,7 +113,7 @@ export function AboutSection() {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base font-black text-[#141414] uppercase">
-                    Education & Diploma
+                    Academic Credentials &amp; Background
                   </h3>
                   <p className="text-xs text-[#525252] leading-relaxed font-medium">
                     {aboutContent.educationText}
@@ -120,10 +121,16 @@ export function AboutSection() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 text-[11px] font-bold text-[#141414] shrink-0">
-                <span className="px-2.5 py-1 rounded-full bg-[#F7EADA] border border-[#141414]/15">IDCM Diploma</span>
-                <span className="px-2.5 py-1 rounded-full bg-[#F7EADA] border border-[#141414]/15">M.Com</span>
-                <span className="px-2.5 py-1 rounded-full bg-[#F7EADA] border border-[#141414]/15">B.Com (Hons)</span>
+              <div className="flex items-center gap-2.5 shrink-0">
+                <a
+                  href={contactContent.resumePdf || "/Nandita_Santra_Resume.pdf"}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2.5 rounded-full button-onyx text-xs font-extrabold uppercase tracking-wider shadow-sm flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download Resume</span>
+                </a>
               </div>
             </motion.div>
 

@@ -92,7 +92,7 @@ export function Navbar() {
                 href={contactContent.resumePdf || "/Nandita_Santra_Resume.pdf"}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFFBF6] border border-[#141414]/20 hover:border-[#141414] text-[#141414] text-xs font-extrabold uppercase tracking-wider transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FFFBF6] border border-[#141414]/20 hover:border-[#141414] text-[#141414] text-xs font-extrabold uppercase tracking-wider transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Resume</span>
