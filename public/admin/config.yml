@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: gauravkrj/Nandita-Portfolio-Website
   branch: main
 
+site_url: https://nanditasantra.vercel.app
 media_folder: "public/uploads"
 public_folder: "/uploads"
 

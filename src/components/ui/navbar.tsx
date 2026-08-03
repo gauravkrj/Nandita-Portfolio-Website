@@ -103,7 +103,7 @@ export function Navbar() {
                 href={contactContent.calendlyUrl || "https://calendly.com/nanditasantra/visibility-power-call"}
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 py-2.5 rounded-full button-onyx text-xs font-extrabold uppercase tracking-wider shadow-sm flex items-center gap-1"
+                className="hidden lg:inline-flex px-5 py-2.5 rounded-full button-onyx text-xs font-extrabold uppercase tracking-wider shadow-sm items-center gap-1"
               >
                 <span>Book Call</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
