@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Download, GraduationCap, Award, BookOpen } from "lucide-react";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import contactContent from "@/content/contact.json";
 
 const CREDENTIALS = [
   {
@@ -55,17 +56,17 @@ export function CredentialsSection() {
             </h2>
           </div>
 
-          {/* Signature Inverted CTA Button (Onyx -> Porcelain on hover) */}
+          {/* Signature Inverted CTA Button */}
           <div>
-            {/* TODO: replace with actual resume.pdf in /public */}
             <a
-              href="/resume.pdf"
-              download="Nandita_Santra_Resume.pdf"
+              href={contactContent.resumePdf || "/Nandita_Santra_Resume.pdf"}
+              target="_blank"
+              rel="noreferrer"
               className="inline-block"
             >
               <MagneticButton
                 type="button"
-                className="px-8 py-4 rounded-2xl button-onyx font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center gap-3 group"
+                className="px-8 py-4 rounded-2xl button-onyx font-extrabold text-xs uppercase tracking-wider shadow-md flex items-center gap-3 group cursor-pointer"
               >
                 <Download className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
                 <span>Download Resume (CV)</span>
@@ -98,15 +99,17 @@ export function CredentialsSection() {
                     <span className="text-xs uppercase font-extrabold tracking-widest text-[#141414]/70 block mb-1">
                       {item.type}
                     </span>
-                    <h3 className="font-black text-base sm:text-xl text-[#141414]">
+                    <h3 className="text-lg sm:text-xl font-black text-[#141414]">
                       {item.title}
                     </h3>
+                    <p className="text-xs text-[#525252] font-semibold mt-0.5">
+                      {item.institution}
+                    </p>
                   </div>
                 </div>
 
-                <div className="sm:text-right text-xs font-semibold text-[#525252]">
-                  <p className="text-[#141414] font-black uppercase">{item.institution}</p>
-                  <p className="font-numeral text-[#141414] font-bold">{item.year}</p>
+                <div className="sm:text-right text-xs font-numeral font-bold text-[#141414]">
+                  {item.year}
                 </div>
               </motion.div>
             );
