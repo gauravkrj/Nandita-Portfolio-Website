@@ -1,0 +1,56 @@
+{
+  "brands": [
+    {
+      "id": "knotycap",
+      "brand": "Knotycap Lifestyle",
+      "role": "Growth Specialist",
+      "summary": "SEO optimization, content strategy & influencer barter partnerships",
+      "period": "Jun 2026 — Present",
+      "image": "/knotycap-brand-work-nandita-santra.png",
+      "tasks": [
+        "On-Page SEO Optimization",
+        "Influencer Barter Outreach",
+        "Content Calendar Planning"
+      ]
+    },
+    {
+      "id": "mamasita",
+      "brand": "Mamasita India",
+      "role": "Social Media Marketing Manager",
+      "summary": "Meta Ads campaigns & Canva-based content design",
+      "period": "Aug 2025 — Sep 2025",
+      "image": "/mymamasita-brand-work-nandita-santra.png",
+      "tasks": [
+        "Meta Ads Campaign Assistance",
+        "Social Media Graphics",
+        "Audience Engagement"
+      ]
+    },
+    {
+      "id": "chacarnival",
+      "brand": "Cha Carnival",
+      "role": "Social Media Manager",
+      "summary": "Content calendar & community engagement strategy",
+      "period": "Feb 2025 — Jun 2025",
+      "image": "/cha-carnival-brand-work-nandita-santra.png",
+      "tasks": [
+        "Content Scheduling",
+        "Community Outreach",
+        "Competitor Benchmarking"
+      ]
+    },
+    {
+      "id": "satanno",
+      "brand": "Satanno Street Cafe",
+      "role": "Social Media Manager",
+      "summary": "Brand content & competitor-informed strategy",
+      "period": "Feb 2026 — Apr 2026",
+      "image": "/satanno-brand-work-nandita-santra.png",
+      "tasks": [
+        "Cafe Branding Content",
+        "Local Audience Engagement",
+        "Visual Grid Planning"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Site Content Manager"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "src/content/hero.json"
+        fields:
+          - { label: "Title Line 1", name: "titleLine1", widget: "string" }
+          - { label: "Title Line 2", name: "titleLine2", widget: "string" }
+          - { label: "Subheading", name: "subheading", widget: "text" }
+          - { label: "Hero Photo", name: "heroImage", widget: "image" }
+
+      - name: "about"
+        label: "About Section"
+        file: "src/content/about.json"
+        fields:
+          - { label: "Portrait Photo", name: "portraitImage", widget: "image" }
+          - { label: "Narrative Quote", name: "quote", widget: "text" }
+          - { label: "Author Name", name: "authorName", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "SEO Card Title", name: "seoTitle", widget: "string" }
+          - { label: "SEO Card Description", name: "seoDescription", widget: "text" }
+          - { label: "Social Card Title", name: "socialTitle", widget: "string" }
+          - { label: "Social Card Description", name: "socialDescription", widget: "text" }
+          - { label: "Academic Credentials Text", name: "educationText", widget: "text" }
+
+      - name: "brand_collaborations"
+        label: "Brand Collaborations"
+        file: "src/content/brand_collaborations.json"
+        fields:
+          - name: "brands"
+            label: "Brand Work List"
+            widget: "list"
+            fields:
+              - { label: "Brand Name", name: "brand", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Summary Quote", name: "summary", widget: "string" }
+              - { label: "Brand Photo", name: "image", widget: "image" }
+              - { label: "Key Deliverables", name: "tasks", widget: "list" }
+
+      - name: "contact"
+        label: "Contact & Social Details"
+        file: "src/content/contact.json"
+        fields:
+          - { label: "Primary Email", name: "email", widget: "string" }
+          - { label: "Test Email", name: "testEmail", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
+          - { label: "Calendly Booking URL", name: "calendlyUrl", widget: "string" }
+          - { label: "Resume PDF", name: "resumePdf", widget: "file" }

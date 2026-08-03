@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --porcelain: #fffbf6;
+    --antique-white: #f7eada;
+    --antique-white-hover: #f0dfcb;
+    --onyx: #141414;
+    --onyx-muted: #525252;
+    --onyx-subtle: #8a8a8a;
+    --border-onyx: rgba(20, 20, 20, 0.15);
+    --border-onyx-strong: rgba(20, 20, 20, 0.35);
+
+    --font-sans: var(--font-sans), system-ui, sans-serif;
+  }
+}
+
+/* Critical Lenis styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden !important;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Base Body Setup */
+body {
+  background-color: var(--porcelain);
+  color: var(--onyx);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--onyx);
+  color: var(--porcelain);
+}
+
+/* Custom Scrollbar - Monochrome Onyx on Porcelain */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--porcelain);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--onyx);
+}
+
+/* Single Font Hierarchy Utility Classes */
+.text-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--onyx);
+}
+
+.text-display-hero {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.text-section-title {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.font-numeral {
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Inverted Signature Button (Onyx -> Porcelain Inversion on Hover) */
+.button-onyx {
+  background-color: var(--onyx);
+  color: var(--porcelain);
+  border: 1px solid var(--onyx);
+  transition: all 250ms ease;
+}
+
+.button-onyx:hover {
+  background-color: var(--porcelain);
+  color: var(--onyx);
+  border-color: var(--onyx);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px var(--onyx);
+}
+
+/* Inverted Badge Utility */
+.badge-onyx {
+  background-color: rgba(20, 20, 20, 0.06);
+  color: var(--onyx);
+  border: 1px solid rgba(20, 20, 20, 0.2);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
